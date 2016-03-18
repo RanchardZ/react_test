@@ -19,6 +19,6 @@ const mapStateToProps = (state) => {
 
 const VisibleProductTable = connect(
 	mapStateToProps
-)(ProductTable)
+)(ProductTable);
 
-export default VisibleProductTable
+export default VisibleProductTable;

@@ -34,4 +34,4 @@ ProductTable.propTypes = {
 	inStockOnly: PropTypes.bool.isRequired
 }
 
-export default ProductTable
+export default ProductTable;

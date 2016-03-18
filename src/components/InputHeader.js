@@ -9,4 +9,4 @@ const InputHeader = () => (
 	</div>
 )
 
-export default InputHeader
+export default InputHeader;

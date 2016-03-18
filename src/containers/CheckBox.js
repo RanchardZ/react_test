@@ -1,25 +1,34 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { checkCheckBox } from '../actions'
+import React from 'react';
+import { connect } from 'react-redux';
+import { checkCheckBox } from '../actions';
+import { bindActionCreators } from 'redux';
 
-let CheckBox = ({dispatch}) => {
-	let inStockOnly;
+const CheckBox = props => {
+	const { actions: { checkCheckBox } } = props;
+	const { inStockOnly } = props;
 	return (
 		<form>
 			<input 
 				type="checkbox"
 				checked={inStockOnly}
 				onClick={e => {
-					e.preventDefault()
-					dispatch(checkCheckBox())
+					e.preventDefault();
+					checkCheckBox();
+					return false;
 				}}
 			/>
 			{' '}
 			Only show products in stock
 		</form>
 	)
-}
+};
 
-CheckBox = connect()(CheckBox)
+const mapStateToProps = state => ({
+	inStockOnly: state.inStockOnly
+});
 
-export default CheckBox
+const mapDispatchToActions = dispatch => ({
+	actions: bindActionCreators({ checkCheckBox }, dispatch)
+});
+
+export default connect(mapStateToProps, mapDispatchToActions)(CheckBox);;
