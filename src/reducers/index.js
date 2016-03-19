@@ -15,8 +15,9 @@ const initState = {
 export const productapp = (state=initState, action) => {
 	switch (action.type) {
 		case 'ADD_FILTER_TEXT':
+			console.log('ADD_FILTER_TEXT');
 			return Object.assign({}, state, {
-				filterText: state.filterText
+				filterText: action.filterText
 			})
 		case 'CHECK_CHECK_BOX':
 			return Object.assign({}, state, {

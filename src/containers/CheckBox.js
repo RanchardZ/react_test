@@ -31,4 +31,4 @@ const mapDispatchToActions = dispatch => ({
 	actions: bindActionCreators({ checkCheckBox }, dispatch)
 });
 
-export default connect(mapStateToProps, mapDispatchToActions)(CheckBox);;
+export default connect(mapStateToProps, mapDispatchToActions)(CheckBox);

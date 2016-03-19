@@ -13,7 +13,8 @@ const getVisibleProducts = (products, inStockOnly) => {
 const mapStateToProps = (state) => {
 	return {
 		products: getVisibleProducts(state.products, state.inStockOnly),
-		inStockOnly: state.inStockOnly
+		inStockOnly: state.inStockOnly,
+		filterText: state.filterText
 	}
 }
 

@@ -13,19 +13,6 @@ const store = createStore(productapp,
 	applyMiddleware(thunk, promise, logger)
 );
 
-store.dispatch({
-	type: 'YOU DONT KNOW'
-})
-store.dispatch({
-	type: 'YOU DONT KNOW'
-})
-store.dispatch({
-	type: 'YOU DONT KNOW'
-})
-store.dispatch({
-	type: 'YOU DONT KNOW'
-})
-
 render(
 	<Provider store={store}>
 		<App />
